@@ -8,18 +8,6 @@ import (
 	"strings"
 )
 
-var Colors = map[string]string{
-	"Init":   "\033[0m",
-	"Red":    "\033[31m",
-	"Green":  "\033[32m",
-	"Yellow": "\033[33m",
-	"Blue":   "\033[34m",
-	"Purple": "\033[35m",
-	"Cyan":   "\033[36m",
-	"Gray":   "\033[37m",
-	// "Orange": "\033[48:5:208m%s\033[m", 
-}
-
 var tabChar = map[int][]string{}
 var HeightChar = 9
 var color string
@@ -91,27 +79,5 @@ func GenerateAscii(input, letterToColor string) {
 			fmt.Print(output)
 		}
 		output = ""
-	}
-}
-func getColorCode(color string) string {
-	switch color {
-	case "red":
-		return Colors["Red"]
-	case "green":
-		return Colors["Green"]
-	case "yellow":
-		return Colors["Yellow"]
-	case "blue":
-		return Colors["Blue"]
-	case "purple":
-		return Colors["Purple"]
-	case "cyan":
-		return Colors["Cyan"]
-	case "gray":
-		return Colors["Gray"]
-	case "orange":
-		return Colors["Orange"]
-	default:
-		return Colors["Init"]
 	}
 }
